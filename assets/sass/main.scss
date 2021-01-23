@@ -6,10 +6,10 @@
 @import 'libs/html-grid';
 @import 'libs/fixed-grid';
 @import 'fontawesome-all.min.css';
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Oswald:600');
 
 /*
-	Massively by Pixelarity
+	Standout by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
@@ -17,13 +17,12 @@
 // Breakpoints.
 
 	@include breakpoints((
-		default:   (1681px,   null     ),
-		xlarge:    (1281px,   1680px   ),
-		large:     (981px,    1280px   ),
-		medium:    (737px,    980px    ),
-		small:     (481px,    736px    ),
-		xsmall:    (361px,    480px    ),
-		xxsmall:   (null,     360px    )
+		xlarge:   ( 1281px,  1680px ),
+		large:    ( 981px,   1280px ),
+		medium:   ( 737px,   980px  ),
+		small:    ( 481px,   736px  ),
+		xsmall:   ( 361px,   480px  ),
+		xxsmall:  ( null,    360px  )
 	));
 
 // Mixins.
@@ -36,7 +35,20 @@
 		@include color-list($p);
 		@include color-section($p);
 		@include color-table($p);
-		@include color-pagination($p);
+		@include color-contact-icons($p);
+		@include color-split($p);
+		@include color-tabs($p);
+	}
+
+	@mixin sr-only {
+		border: 0;
+		clip: rect(0,0,0,0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
 	}
 
 // Base.
@@ -53,19 +65,21 @@
 	@import 'components/form';
 	@import 'components/icon';
 	@import 'components/image';
-	@import 'components/actions';
-	@import 'components/icons';
 	@import 'components/list';
+	@import 'components/actions';
+	@import 'components/tabs';
+	@import 'components/icons';
+	@import 'components/contact-icons';
 	@import 'components/section';
 	@import 'components/table';
-	@import 'components/pagination';
+	@import 'components/wrapper';
+	@import 'components/gallery';
+	@import 'components/split';
 
 // Layout.
 
-	@import 'layout/wrapper';
-	@import 'layout/intro';
 	@import 'layout/header';
-	@import 'layout/nav';
+	@import 'layout/menu';
+	@import 'layout/banner';
 	@import 'layout/main';
 	@import 'layout/footer';
-	@import 'layout/navPanel';

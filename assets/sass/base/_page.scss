@@ -1,5 +1,5 @@
 ///
-/// Massively by Pixelarity
+/// Standout by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -34,8 +34,7 @@
 		}
 
 	body {
-
-		background-color: _palette(invert, bg);
+		background: _palette(bg);
 
 		// Stops initial animations until page loads.
 			&.is-preload {

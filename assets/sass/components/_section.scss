@@ -1,5 +1,5 @@
 ///
-/// Massively by Pixelarity
+/// Standout by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -13,97 +13,110 @@
 	}
 
 	header {
-		cursor: default;
-
-		> .date {
-			display: block;
-			font-size: 0.8rem;
-			height: 1;
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
+		p {
 			position: relative;
+			margin: 0 0 (_size(element-margin) * 0.75) 0;
 		}
 
-		> p {
-			font-style: italic;
+		h2 + p {
+			font-size: 1.25rem;
+			margin-top: (_size(element-margin) * -0.5);
 		}
 
-		> h1 + p {
+		h3 + p {
 			font-size: 1.1rem;
-			margin-top: -0.5rem;
-			line-height: 2;
+			margin-top: (_size(element-margin) * -0.4);
 		}
 
-		> h2 + p {
-			font-size: 1rem;
-			margin-top: -0.75rem;
-		}
-
-		> h3 + p {
+		h4 + p,
+		h5 + p,
+		h6 + p {
 			font-size: 0.9rem;
-			margin-top: -0.75rem;
-		}
-
-		> h4 + p {
-			font-size: 0.8rem;
-			margin-top: -0.75rem;
+			margin-top: (_size(element-margin) * -0.3);
 		}
 
 		&.major {
-			margin: 0 0 (_size(element-margin) * 2) 0;
-			text-align: center;
+			margin-bottom: (_size(element-margin) * 1.35);
+			padding-bottom: (_size(element-margin) * 1.35);
+			position: relative;
 
-			> :last-child {
+			h1 {
+				border-bottom: 1px solid;
+				margin-bottom: 2rem;
+				padding-bottom: 2rem;
+			}
+
+			p {
+				font-size: 1.5rem;
 				margin-bottom: 0;
 			}
 
-			> p {
-				margin-top: 0;
-				text-align: center;
+			&.alt {
+				margin-bottom: 0;
 			}
+		}
 
-			> .date {
-				font-size: 1rem;
-				margin: 0 0 (_size(element-margin) * 2) 0;
+		@include breakpoint('<=large') {
+			&.major {
+				margin-bottom: (_size(element-margin) * 1.25);
+				padding-bottom: (_size(element-margin) * 1.25);
 
-				&:before, &:after {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 50%;
-					width: calc(50% - 6rem);
-					border-top: solid 2px;
+				h1 {
+					margin-bottom: 1rem;
+					padding-bottom: 1rem;
 				}
 
-				&:before {
-					left: 0;
+				p {
+					font-size: 1.45rem;
 				}
 
-				&:after {
-					right: 0;
+				&.alt {
+					margin-bottom: (_size(element-margin) * 1.35);
 				}
 			}
 		}
 
 		@include breakpoint('<=medium') {
-			br {
-				display: none;
+			&.major {
+				p {
+					font-size: 1.35rem;
+				}
 			}
 		}
 
 		@include breakpoint('<=small') {
 			&.major {
-				margin: 0 0 _size(element-margin) 0;
+				margin-bottom: (_size(element-margin) * 0.9);
+				padding-bottom: (_size(element-margin) * 0.65);
+
+				p {
+					font-size: 1.25rem;
+				}
+
+				&.alt {
+					margin-bottom: (_size(element-margin) * 0.9);
+				}
+			}
+		}
+
+		@include breakpoint('<=xsmall') {
+			&.major {
+				p {
+					font-size: 1.25rem;
+				}
 			}
 		}
 	}
 
 	@mixin color-section($p: null) {
 		header {
+			p {
+				color: _palette($p, fg);
+			}
+
 			&.major {
-				.date {
-					&:before, &:after {
-						border-top-color: _palette($p, border);
-					}
+				h1 {
+					border-color: _palette($p, border);
 				}
 			}
 		}

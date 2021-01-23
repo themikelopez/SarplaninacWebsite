@@ -1,5 +1,5 @@
 ///
-/// Massively by Pixelarity
+/// Standout by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -13,7 +13,7 @@
 			margin-bottom: 0;
 		}
 
-		> .fields  {
+		> .fields {
 			$gutter: (_size(element-margin) * 0.75);
 
 			@include vendor('display', 'flex');
@@ -70,17 +70,9 @@
 
 	label {
 		display: block;
-		font-family: _font(family-heading);
-		font-weight: _font(weight-heading);
-		line-height: 1.5;
-		letter-spacing: 0.075em;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		margin: 0 0 (_size(element-margin) * 0.375) 0;
-
-		@include breakpoint('<=medium') {
-			font-size: 0.9rem;
-		}
+		font-size: 0.9rem;
+		font-weight: _font(weight-bold);
+		margin: 0 0 (_size(element-margin) * 0.5) 0;
 	}
 
 	input[type="text"],
@@ -89,9 +81,8 @@
 	select,
 	textarea {
 		@include vendor('appearance', 'none');
-		background: transparent;
-		border-radius: 0;
-		border: solid 2px;
+		border-radius: _size(border-radius);
+		border: solid _size(border-width);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -105,9 +96,9 @@
 	}
 
 	select {
-		background-size: 1.25rem;
-		background-repeat: no-repeat;
 		background-position: calc(100% - 1rem) center;
+		background-repeat: no-repeat;
+		background-size: 1.25rem;
 		height: _size(element-height);
 		padding-right: _size(element-height);
 		text-overflow: ellipsis;
@@ -149,26 +140,23 @@
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1rem;
-			letter-spacing: 0;
-			font-family: _font(family);
-			text-transform: none;
 			font-weight: _font(weight);
-			padding-left: (_size(element-height) * 0.6) + 1rem;
-			padding-right: 1rem;
+			padding-left: (_size(element-height) * 0.6) + 0.75rem;
+			padding-right: 0.75rem;
 			position: relative;
 
 			&:before {
-				border-radius: 0;
-				border: solid 2px;
+				border-radius: _size(border-radius);
+				border: solid _size(border-width);
 				content: '';
 				display: inline-block;
 				font-size: 0.8rem;
 				height: (_size(element-height) * 0.6);
 				left: 0;
-				line-height: (_size(element-height) * 0.55);
+				line-height: (_size(element-height) * 0.6);
 				position: absolute;
 				text-align: center;
-				top: -0.125rem;
+				top: 0;
 				width: (_size(element-height) * 0.6);
 			}
 		}
@@ -183,7 +171,7 @@
 	input[type="checkbox"] {
 		& + label {
 			&:before {
-				border-radius: 0;
+				border-radius: _size(border-radius);
 			}
 		}
 	}
@@ -213,6 +201,7 @@
 	}
 
 	@mixin color-form($p: null) {
+
 		label {
 			color: _palette($p, fg-bold);
 		}
@@ -222,10 +211,13 @@
 		input[type="email"],
 		select,
 		textarea {
+			background-color: _palette($p, bg);
 			border-color: _palette($p, border);
 
 			&:focus {
-				border-color: _palette($p, accent);
+				border-color: _palette($p, fg-bold);
+				box-shadow: 0 0 0 _size(border-width) _palette($p, fg-bold);
+				
 			}
 		}
 
@@ -233,14 +225,8 @@
 			background-image: svg-url("<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#{_palette($p, border)}' /></svg>");
 
 			option {
-				background-color: _palette($p, bg);
-				color: _palette($p, fg);
-			}
-		}
-
-		.select-wrapper {
-			&:before {
-				color: _palette($p, border);
+				color: _palette($p, fg-bold);
+				background: _palette($p, bg);
 			}
 		}
 
@@ -250,6 +236,7 @@
 				color: _palette($p, fg);
 
 				&:before {
+					background: _palette($p, bg);
 					border-color: _palette($p, border);
 				}
 			}
@@ -264,7 +251,8 @@
 
 			&:focus + label {
 				&:before {
-					border-color: _palette($p, accent);
+					border-color: _palette($p, fg-bold);
+					box-shadow: 0 0 0 _size(border-width) _palette($p, fg-bold);
 				}
 			}
 		}
