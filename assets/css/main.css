@@ -3676,7 +3676,7 @@ input, select, textarea {
 				-ms-transition: color 0.2s ease-in-out;
 				transition: color 0.2s ease-in-out;
 				color: inherit;
-				font-weight: 900;
+				font-weight: 600;
 				letter-spacing: 0.25rem;
 				text-decoration: none;
 			}
@@ -4306,7 +4306,7 @@ input, select, textarea {
 			margin: 0 auto;
 			padding-bottom: 3rem;
 			position: relative;
-			text-align-last: justify;
+			text-align-last: justify
 			text-align: justify;
 			opacity: 0.95;
 		}
