@@ -2441,6 +2441,7 @@ input, select, textarea {
 			text-align: center;
 			width: 3rem;
 		}
+		
 
 		.icon.alt > .label {
 			display: inline-block;
@@ -2835,6 +2836,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		margin-top: 3rem;
 	}
 
 		ul.contact-icons li {
@@ -2849,6 +2851,10 @@ input, select, textarea {
 				margin-right: 1rem;
 				text-align: center;
 				width: 3rem;
+			}
+
+			ul.contact-icons li .icon:hover {
+				color: red;
 			}
 
 			ul.contact-icons li .icon > .label {
@@ -2917,6 +2923,9 @@ input, select, textarea {
 		background: #000000;
 		color: #ffffff;
 	}
+
+
+	
 
 /* Section/Article */
 
@@ -4661,4 +4670,13 @@ input, select, textarea {
 	.copyright {
 		color: rgba(40, 40, 40, 0.5);
 		text-align: center;
+	}
+
+	.copyright a {
+		text-decoration: none;
+	}
+
+	.copyright a:hover {
+		text-decoration: none;
+		color: red;
 	}
