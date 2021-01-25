@@ -2925,6 +2925,11 @@ input, select, textarea {
 		color: #ffffff;
 	}
 
+	ul.thanks li .icon:before {
+		background: #cacaca;
+		color: #505050;
+	}
+
 
 	
 

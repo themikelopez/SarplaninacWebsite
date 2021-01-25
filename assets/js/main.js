@@ -61,9 +61,11 @@
 					// Images (in the format of 'url': 'alignment').
 						images: {
 							'images/slides/lucasface.jpeg': '0% 35%',
-							'images/slides/lucasface.jpeg': 'center',
-							'images/slides/lucasface.jpeg': 'center',
-							'images/slides/lucasface.jpeg': 'center'
+							'images/slides/lucas1.jpg': 'center',
+							'images/slides/lucas3.jpg': 'center',
+							'images/slides/lucas2.jpg': 'center',
+							'images/slides/lucas5.jpg': 'center',
+							'images/slides/lucas4.jpg': 'center'
 						},
 
 					// Delay.
