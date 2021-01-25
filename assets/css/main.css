@@ -181,6 +181,7 @@ input, select, textarea {
 
 		a:hover {
 			text-decoration: none;
+			color: red;
 		}
 
 	strong, b {
@@ -2836,7 +2837,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
-		margin-top: 3rem;
+		/*margin-top: 3rem;*/
 	}
 
 		ul.contact-icons li {
@@ -4285,6 +4286,7 @@ input, select, textarea {
 
 		#banner .split .content {
 			border-color: rgba(255, 255, 255, 0.25);
+			text-align: center;
 		}
 
 		#banner .tabs > .titles > .title:hover {
