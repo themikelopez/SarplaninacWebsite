@@ -369,6 +369,25 @@ input, select, textarea {
 		border-bottom-color: rgba(99, 116, 133, 0.25);
 	}
 
+	.centered {
+		list-style-type: none;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin: 0;
+		padding: 0;
+	}
+
+	ul.footerNav {
+		font-weight: 600;
+		text-align: center;
+	}
+
+	ul.footerNav li{
+		display: inline-block;
+
+	}
+
 /* Row */
 
 	.row {
