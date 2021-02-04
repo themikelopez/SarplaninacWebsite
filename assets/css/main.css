@@ -3890,10 +3890,6 @@ input, select, textarea {
 					padding-left: 1rem;
 				}
 
-					#header > .logo span {
-						display: none;
-					}
-
 				#header > a[href="#menu"] {
 					height: calc(3rem - 1px);
 					line-height: 3rem;
