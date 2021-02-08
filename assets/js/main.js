@@ -63,11 +63,11 @@
 							'images/slides/lucasface.jpeg': '0 40%',
 							'images/pw/pw-sarp.jpg': '0 20%',
 							'images/slides/lucas9.jpg': 'center',
-							'images/pw/pw-sarp11.jpg': 'top',
+							'images/pw/pw-sarp24.jpg': 'center',
 							'images/slides/lucas1.jpg': 'center',
-							'images/pw/pw-sarp2.jpg': 'top',
-							'images/slides/lucas7.jpg': '0 35%',
 							'images/pw/pw-sarp23.jpg': 'center',
+							'images/slides/lucas7.jpg': '0 35%',
+							'images/pw/pw-sarp2.jpg': 'top',
 							'images/pw/pw-sarp8.jpg': 'center'
 						},
 
