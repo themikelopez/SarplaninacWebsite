@@ -2511,8 +2511,8 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2rem 0;
-			width: 100%;
+			margin: 0 auto 2rem auto;
+			width: 70%;
 		}
 
 			.image.fit img {
@@ -3560,6 +3560,7 @@ input, select, textarea {
 
 			.split .content p {
 				margin-bottom: 2.5rem;
+				text-align: center;
 			}
 
 			.split .content > *:last-child {
