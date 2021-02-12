@@ -190,6 +190,7 @@ input, select, textarea {
 
 	em, i {
 		font-style: italic;
+		font-weight: 400;
 	}
 
 	p {
@@ -2489,11 +2490,12 @@ input, select, textarea {
 			display: block;
 		}
 
-		.image.left, .image.right {
+		.image.left, .image.right, .image.center {
 			max-width: 50%;
+			padding-bottom: 1em;
 		}
 
-			.image.left img, .image.right img {
+			.image.left img, .image.right img, .image.center img {
 				width: 100%;
 			}
 
@@ -2507,6 +2509,10 @@ input, select, textarea {
 			float: right;
 			margin: 0 0 1rem 1.5rem;
 			top: 0.25rem;
+		}
+
+		.image.small {
+			max-width: 15% !important;
 		}
 
 		.image.fit {
@@ -2539,6 +2545,10 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			.image.small {
+				max-width: 50% !important;
+			}
+
 		}
 
 	.images {
@@ -2547,6 +2557,11 @@ input, select, textarea {
 				padding: 1em;
 				text-align: center;
 				border-radius: 2%;
+	}
+
+	figcaption {
+		color:rgb(163, 163, 163);
+		font-size: .8em;
 	}
 
 /* List */
@@ -3189,6 +3204,7 @@ input, select, textarea {
 			margin: 0 auto;
 			max-width: 65rem;
 			width: calc(100% - 4rem);
+			text-align: center;
 		}
 
 		.wrapper:before, .wrapper:after {
@@ -3560,7 +3576,6 @@ input, select, textarea {
 
 			.split .content p {
 				margin-bottom: 2.5rem;
-				text-align: center;
 			}
 
 			.split .content > *:last-child {
