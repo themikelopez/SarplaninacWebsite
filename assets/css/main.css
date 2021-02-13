@@ -2502,6 +2502,7 @@ input, select, textarea {
 		.image.left {
 			float: left;
 			margin: 0 1.5rem 1rem 0;
+			padding-top: 1em;
 			top: 0.25rem;
 		}
 
