@@ -2516,6 +2516,15 @@ input, select, textarea {
 			max-width: 15% !important;
 		}
 
+		.image.med {
+			display: block;
+			margin: 0 auto 2rem auto;
+			max-width: 40%;
+		}
+			.image.med img {
+				width:100%;
+			}
+
 		.image.fit {
 			display: block;
 			margin: 0 auto 2rem auto;
@@ -2548,6 +2557,10 @@ input, select, textarea {
 
 			.image.small {
 				max-width: 50% !important;
+			}
+
+			.image.med{
+				max-width: 90% !important;
 			}
 
 		}
