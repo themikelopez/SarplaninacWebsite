@@ -2532,7 +2532,7 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			margin: 0 auto 2rem auto;
-			width: 70%;
+			max-width: 70%;
 		}
 
 			.image.fit img {
@@ -2564,6 +2564,9 @@ input, select, textarea {
 			}
 
 			.image.med{
+				max-width: 90% !important;
+			}
+			.image.fit{
 				max-width: 90% !important;
 			}
 
