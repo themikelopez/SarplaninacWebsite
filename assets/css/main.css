@@ -3767,6 +3767,10 @@ input, select, textarea {
 			white-space: nowrap;
 		}
 
+			#header > .logoimg {
+				
+			}
+
 			#header > .logo a {
 				-moz-transition: color 0.2s ease-in-out;
 				-webkit-transition: color 0.2s ease-in-out;
