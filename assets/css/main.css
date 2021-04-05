@@ -401,23 +401,26 @@ input, select, textarea {
 	}
 
 	.scroll {
+		padding: 1rem;
 		position: absolute;
 		z-index: 5;
 		opacity: 1;
-		top: 45rem;
+		top: 65%;
 		opacity: 1;
-		-webkit-animation: opacity 2s infinite; /* Safari 4+ */
-		-moz-animation:    opacity 2s infinite; /* Fx 5+ */
-		-o-animation:      opacity 2s infinite; /* Opera 12+ */
-		animation:         opacity 2s infinite; /* IE 10+, Fx 29+ */
+		-webkit-animation: scroll 3s infinite; /* Safari 4+ */
+		-moz-animation:    scroll 3s infinite; /* Fx 5+ */
+		-o-animation:      scroll 3s infinite; /* Opera 12+ */
+		animation:         scroll 3s infinite; /* IE 10+, Fx 29+ */
 	}
 
-	@keyframes opacity {
+	@keyframes scroll {
 		0%, 100% {
-		  opacity: 1;
+		  opacity: .3;
+		  font-size: 1.5rem;
 		}
 		50% {
-		  opacity: .5;
+		  opacity: 1;
+		  font-size:1.65rem;
 		}
 	  }
 
