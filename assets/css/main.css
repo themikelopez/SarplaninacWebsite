@@ -416,11 +416,11 @@ input, select, textarea {
 	@keyframes scroll {
 		0%, 100% {
 		  opacity: .3;
-		  font-size: 1.5rem;
+		  font-size: .8rem;
 		}
 		50% {
 		  opacity: 1;
-		  font-size:1.65rem;
+		  font-size:.9rem;
 		}
 	  }
 
